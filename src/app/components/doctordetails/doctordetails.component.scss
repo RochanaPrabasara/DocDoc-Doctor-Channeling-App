@@ -1,0 +1,155 @@
+.doctor-details-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+  
+    .doctor-header {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      align-items: center;
+  
+      .doctor-img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        background-color: #5d5df0;
+        padding: 20px;
+      }
+  
+      .doctor-info {
+        flex: 1;
+  
+        h1 {
+          font-size: 28px;
+          font-weight: 600;
+          color: #333;
+  
+          .verified {
+            color: #3f51b5;
+            font-size: 20px;
+            vertical-align: middle;
+            margin-left: 5px;
+          }
+        }
+  
+        p {
+          color: #555;
+          margin: 5px 0;
+          font-size: 14px;
+        }
+  
+        h4 {
+          margin-top: 20px;
+          font-size: 16px;
+          font-weight: 600;
+  
+          .info-icon {
+            font-size: 14px;
+            margin-left: 5px;
+            cursor: pointer;
+          }
+        }
+  
+        strong {
+          color: #333;
+        }
+      }
+    }
+  
+    .booking-section {
+      margin-top: 30px;
+  
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+      }
+  
+      .dates {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+  
+        div {
+          width: 60px;
+          height: 80px;
+          border: 1px solid #e0e0e0;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: #333;
+          font-weight: 500;
+          transition: all 0.3s ease;
+  
+          &:hover {
+            border-color: #5d5df0;
+          }
+  
+          &.selected-date {
+            background-color: #5d5df0;
+            color: #fff;
+            border: none;
+          }
+        }
+      }
+  
+      .slots {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+  
+        div {
+          padding: 10px 20px;
+          border: 1px solid #d0d0d0;
+          border-radius: 30px;
+          cursor: pointer;
+          font-size: 14px;
+          color: #555;
+          transition: all 0.3s ease;
+  
+          &:hover {
+            border-color: #5d5df0;
+            color: #5d5df0;
+          }
+  
+          &.selected-slot {
+            background-color: #5d5df0;
+            color: #fff;
+            border: none;
+          }
+        }
+      }
+  
+      .book-btn {
+        background-color: #5d5df0;
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+  
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+  
+        &:hover:enabled {
+          background-color: #4c4cc9;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,65 @@
+  
+  <!-- Add other homepage content below -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Skip the Queue,<br>Meet your Doctor Fast !</h1>
+      <div class="sub-text">
+        <!-- <div class="avatars">
+          <img src="assets/avatar1.png" alt="User 1">
+          <img src="assets/avatar2.png" alt="User 2">
+          <img src="assets/avatar3.png" alt="User 3">
+        </div> -->
+        <p>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
+      </div>
+      <button class="appointment-btn" (click)="scrollToSpeciality()">Book appointment →</button>
+    </div>
+    <div class="hero-image">
+      <img src="assets/doctors.png" alt="Doctors">
+    </div>
+  </section>
+
+  <section id="speciality-section" class="speciality-section">
+    <h2>Find by Speciality</h2>
+    <p>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
+    
+    <div class="speciality-container">
+      <div class="speciality-card" *ngFor="let speciality of specialities">
+        <img [src]="'assets/specialities/' + speciality.image" [alt]="speciality.name">
+        <p>{{ speciality.name }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="top-doctors" class="top-doctors-section">
+    <h2 class="section-title">Top Doctors to Book</h2>
+    <p class="section-subtitle">Simply browse through our extensive list of trusted doctors.</p>
+  
+    <div class="doctors-grid">
+      <div class="doctor-card" *ngFor="let doctor of doctors" (click)="goToDoctorDetails(doctor.id)" >
+        <img [src]="doctor.image" alt="Doctor Photo" class="doctor-image" />
+        <div class="doctor-info">
+          <p class="availability"><span class="dot"></span> Available</p>
+          <h3>{{ doctor.name }}</h3>
+          <p class="speciality">{{ doctor.speciality }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="more-btn-container">
+      <a mat-button class="more-btn" routerLink="/alldoctors" routerLinkActive="active">more</a>
+      </div>
+  </section>
+
+  <div class="before-footer-banner">
+    <div class="banner-content">
+      <div class="text-section">
+        <h2>Book Appointment<br>With 100+ Trusted Doctors</h2>
+        <button class="cta-btn" routerLink="/register">Create account</button>
+      </div>
+      <div class="image-wrapper">
+        <img src="assets/point.png" alt="Doctor" />
+      </div>
+    </div>
+  </div>
+
+
+  

@@ -1,0 +1,39 @@
+<section *ngIf="doctor" class="doctor-details-container">
+    <div class="doctor-header">
+      <img [src]="doctor.image" alt="{{ doctor.name }}" class="doctor-img">
+  
+      <div class="doctor-info">
+        <h1>{{ doctor.name }} <span class="verified">✔️</span></h1>
+        <p>{{ doctor.speciality }} • {{ doctor.experience }}</p>
+  
+        <h4>About <span class="info-icon">ℹ️</span></h4>
+        <p>{{ doctor.bio }}</p>
+        <p><strong>Appointment fee:</strong> ${{ doctor.fee }}</p>
+      </div>
+    </div>
+  
+    <!-- Booking slots -->
+    <div class="booking-section">
+      <h3>Booking slots</h3>
+      <div class="dates">
+        <div *ngFor="let date of next7Days" 
+             (click)="selectDate(date)" 
+             [ngClass]="{'selected-date': selectedDate === date}">
+          {{ date | date:'EEE dd' }}
+        </div>
+      </div>
+  
+      <div class="slots">
+        <div *ngFor="let slot of doctor?.slots"
+             (click)="selectSlot(slot)" 
+             [ngClass]="{'selected-slot': selectedSlot === slot}">
+          {{ slot }}
+        </div>
+      </div>
+  
+      <button mat-raised-button color="primary" (click)="bookAppointment()" [disabled]="!selectedSlot" class="book-btn">
+        Book an appointment
+      </button>
+    </div>
+  </section>
+  

@@ -1,0 +1,78 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white;
+  }
+
+  .header{
+    display: flex;
+    background-color: blue;
+  }
+
+  .leftside{
+    display: flex;
+    justify-content: center;
+  }
+
+  .adminbtn{
+    border-radius: 20px;
+  }
+  
+  .createaccButton{
+    background-color: #5B4DED !important;
+    color: white !important;
+    border-radius: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5B4DED;
+  }
+  
+  .nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .nav-actions button {
+    margin-left: 10px;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  
+    .username {
+      font-weight: 600;
+      color: #333;
+      font-size: 16px;
+    }
+  
+    button {
+      background-color: #f44336; // red warn color
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #d32f2f; // darker red on hover
+      }
+    }
+  }
+  

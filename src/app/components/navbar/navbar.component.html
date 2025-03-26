@@ -1,0 +1,25 @@
+<mat-toolbar class="navbar">
+  <div class="logo"> 
+    <span class="brand-name">DocDoc</span>
+  </div>
+  <nav class="nav-links">
+    <a mat-button routerLink="/home" routerLinkActive="active">HOME</a>
+    <a mat-button routerLink="/alldoctors" routerLinkActive="active">ALL DOCTORS</a>
+    <a mat-button routerLink="/about" routerLinkActive="active">ABOUT</a>
+    <a mat-button routerLink="/contact" routerLinkActive="active">CONTACT</a>
+  </nav>
+
+  <!-- CONDITIONAL ACTIONS -->
+  <div class="nav-actions" *ngIf="user; else guest">
+    <span class="username">Hi, {{ user.fullName }}</span>
+    <button mat-button (click)="logout()" color="warn">Logout</button>
+  </div>
+
+  <ng-template #guest>
+    <div class="nav-actions">
+      <button mat-raised-button routerLink="" class="adminbtn">Admin Panel</button>
+      <button mat-raised-button routerLink="/register" class="createaccButton">Create Account</button>
+    </div>
+  </ng-template>
+</mat-toolbar>
+<hr>
