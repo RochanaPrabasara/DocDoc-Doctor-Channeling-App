@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DoctordetailsComponent } from './components/doctordetails/doctordetails.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -31,6 +32,7 @@ import { DoctordetailsComponent } from './components/doctordetails/doctordetails
     AboutComponent,
     CreateaccountComponent,
     DoctordetailsComponent,
+    ContactComponent,
   
 
   ],

@@ -3,10 +3,10 @@
     <span class="brand-name">DocDoc</span>
   </div>
   <nav class="nav-links">
-    <a mat-button routerLink="/home" routerLinkActive="active">HOME</a>
+    <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
     <a mat-button routerLink="/alldoctors" routerLinkActive="active">ALL DOCTORS</a>
     <a mat-button routerLink="/about" routerLinkActive="active">ABOUT</a>
-    <a mat-button routerLink="/contact" routerLinkActive="active">CONTACT</a>
+    <a mat-button routerLink="/contacts" routerLinkActive="active">CONTACT</a>
   </nav>
 
   <!-- CONDITIONAL ACTIONS -->
@@ -17,7 +17,7 @@
 
   <ng-template #guest>
     <div class="nav-actions">
-      <button mat-raised-button routerLink="" class="adminbtn">Admin Panel</button>
+      <!-- <button mat-raised-button routerLink="" class="adminbtn">Admin Panel</button> -->
       <button mat-raised-button routerLink="/register" class="createaccButton">Create Account</button>
     </div>
   </ng-template>

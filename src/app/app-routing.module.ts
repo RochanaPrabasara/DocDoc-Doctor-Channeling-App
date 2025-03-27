@@ -5,6 +5,7 @@ import { AlldoctorsComponent } from './components/alldoctors/alldoctors.componen
 import { AboutComponent } from './components/about/about.component';
 import { CreateaccountComponent } from './components/createaccount/createaccount.component';
 import { DoctordetailsComponent } from './components/doctordetails/doctordetails.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'about', component:AboutComponent},
   { path: 'register', component:CreateaccountComponent},
   { path: 'doctor/:id', component:DoctordetailsComponent },
+  { path: 'contacts', component: ContactComponent },
   { path: '**', redirectTo: '' },
 ];
 
